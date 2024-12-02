@@ -11,7 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_appauth_platform_interface: ^8.0.0
+#  flutter_appauth_platform_interface: ^8.0.0
+  flutter_appauth_platform_interface:
+    git:
+      url: https://github.com/KawindaWAD/flutter_appauth/tree/master/flutter_appauth_platform_interface.git
 
 flutter:
   plugin:
