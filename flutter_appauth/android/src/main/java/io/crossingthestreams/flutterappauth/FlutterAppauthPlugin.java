@@ -440,6 +440,16 @@ public class FlutterAppauthPlugin
       authRequestBuilder.setNonce(nonce);
     }
 
+    authRequestBuilder.setState(null);
+
+    if(!promptValues.isEmpty()){
+
+      final String codeChallenge = promptValues.get(0);
+
+      authRequestBuilder.setCodeVerifier(codeChallenge, codeChallenge, "S256");
+
+    }
+
     if (additionalParameters != null && !additionalParameters.isEmpty()) {
 
       if (additionalParameters.containsKey("ui_locales")) {
